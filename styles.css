@@ -12,48 +12,90 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
   line-height: 1.6;
   color: var(--accent2);
   background-color: var(--secondary);
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
 .navbar {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   background: var(--secondary);
   border-bottom: 1px solid #ccc;
+  gap: 1rem;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--accent2);
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 80px;
+}
+
+.logo-bottom {
+  height: 50px;
+  margin-right: 1rem;
+}
+
+nav {
+  flex: 1;
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  flex: 1;
+  text-align: center;
+  border-left: 1px solid black;
+}
+
+.nav-links li:first-child {
+  border-left: none;
 }
 
 .nav-links li a {
+  display: block;
+  padding: 0.5rem 1rem;
   text-decoration: none;
   color: var(--accent2);
   font-weight: 500;
 }
 
+button {
+  border-radius: 999px;
+  font-family: 'Quicksand', sans-serif;
+}
+
 .auth-buttons {
   display: flex;
   gap: 0.5rem;
+  align-items: center;
 }
 
 .btn-outline {
-  background: transparent;
-  border: 1px solid var(--accent2);
-  color: var(--accent2);
+  background: var(--accent1);
+  border: transparent;
+  color: white;
   padding: 0.4rem 1rem;
   cursor: pointer;
 }
@@ -70,6 +112,7 @@ body {
   text-align: center;
   padding: 4rem 2rem;
   background-color: var(--secondary);
+  border-bottom: 1px solid #ccc;
 }
 
 .hero h1 {
@@ -86,9 +129,12 @@ body {
 .latest-recipes {
   padding: 2rem;
   background: var(--secondary);
+  border-bottom: 1px solid #ccc;
+
 }
 
 .latest-recipes h2 {
+  margin-top: 40px;
   margin-bottom: 1rem;
   color: var(--accent2);
 }
@@ -96,33 +142,46 @@ body {
 .recipe-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  justify-content: space-evenly; /* Even space between and around cards */
+  gap: 2rem;                      /* Vertical gap if they wrap */
+  padding: 1rem;
 }
 
 .recipe-card {
-  width: 250px;
-  background: white;
-  border: 1px solid #ddd;
+  display: block;
+  width: 300px;
   padding: 1rem;
-  text-align: center;
-  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  text-align: left;
+  text-decoration: none;  /* Remove underline from links */
+  color: inherit;         /* Keep your default text color */
+  transition: transform 0.2s ease;
+}
+
+.recipe-card:hover {
+  transform: scale(1.05); /* Optional: add a hover effect */
 }
 
 .recipe-card img {
   width: 100%;
-  height: auto;
-  border-radius: 5px;
+  aspect-ratio: 1 / 1;         /* Makes it square */
+  object-fit: cover;           /* Crops to fill the square */
   margin-bottom: 0.5rem;
+  display: block;
+  border: 2px solid #ccc;
 }
 
 .culture {
   padding: 2rem;
   text-align: center;
   background-color: var(--secondary);
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .culture h2 {
   color: var(--accent2);
+  text-align: left;
+  margin-bottom: 40px;
 }
 
 .culture-buttons {
@@ -137,14 +196,18 @@ body {
   background: var(--accent1);
   color: white;
   border: none;
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 2rem;
   border-radius: 20px;
   cursor: pointer;
 }
 
 footer {
+  display: flex;
   text-align: center;
+  align-items: center;
   padding: 1rem;
   background: var(--primary);
   color: white;
+  text-align: left;
+  border-top: 1px solid #ccc;
 }
