@@ -142,8 +142,8 @@ button {
 .recipe-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly; /* Even space between and around cards */
-  gap: 2rem;                      /* Vertical gap if they wrap */
+  justify-content: space-evenly;
+  gap: 2rem;
   padding: 1rem;
 }
 
@@ -152,19 +152,19 @@ button {
   width: 300px;
   padding: 1rem;
   text-align: left;
-  text-decoration: none;  /* Remove underline from links */
-  color: inherit;         /* Keep your default text color */
+  text-decoration: none; 
+  color: inherit; 
   transition: transform 0.2s ease;
 }
 
 .recipe-card:hover {
-  transform: scale(1.05); /* Optional: add a hover effect */
+  transform: scale(1.05); 
 }
 
 .recipe-card img {
   width: 100%;
-  aspect-ratio: 1 / 1;         /* Makes it square */
-  object-fit: cover;           /* Crops to fill the square */
+  aspect-ratio: 1 / 1;  
+  object-fit: cover;  
   margin-bottom: 0.5rem;
   display: block;
   border: 2px solid #ccc;
