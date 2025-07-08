@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: var(--secondary);
+  background: var(--primary);
   border-bottom: 1px solid #ccc;
   gap: 1rem;
 }
@@ -101,7 +101,7 @@ button {
 }
 
 .btn-primary {
-  background: var(--primary);
+  background: var(--accent1);
   color: white;
   border: none;
   padding: 0.4rem 1rem;
