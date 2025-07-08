@@ -55,9 +55,9 @@ nav {
 
 .nav-links {
   display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  gap: 2rem;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -79,6 +79,13 @@ nav {
   text-decoration: none;
   color: var(--accent2);
   font-weight: 500;
+  transition: .2s ease-in-out;
+}
+
+.nav-links li a:hover {
+  background: var(--secondary);
+  color: var(--accent1);
+  border-radius: 20px;
 }
 
 button {
@@ -199,6 +206,74 @@ button {
   padding: 0.6rem 2rem;
   border-radius: 20px;
   cursor: pointer;
+}
+
+.recipe-tag {
+  margin: 2rem;
+}
+
+.recipe-tag tags {
+  display: flex;
+  margin: .5rem 0;
+}
+
+.recipe-tag tags p {
+  padding: .4rem;
+  border-right: 1px solid var(--accent2);
+}
+
+.recipe-tag tags p:last-child {
+  border-right: none;
+}
+
+.recipe-ingredients {
+  margin: 2rem;
+}
+
+.ingredients {
+  margin: 0 1rem;
+}
+
+.video-tutorial {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-tutorial h2 {
+  align-self: flex-start;
+}
+
+.video-tutorial iframe {
+  width: 40%;
+  aspect-ratio: 16/9;
+  border: none;
+  border-radius: 5px;
+}
+
+.instructions {
+  margin: 2rem;
+}
+
+.instructions ol {
+  margin: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.final-result {
+  margin: 2rem;
+}
+
+.final-result img {
+  display: block;
+  margin: 0 auto;
+  width: 30%;
+  height: auto;
+  border-radius: 8px;
 }
 
 footer {
